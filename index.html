@@ -4,41 +4,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lerna Travel | Ճանապարհորդիր Հայաստանի հետ</title>
-<meta name="description" content="Բացահայտիր Հայաստանի գեղեցիկ վայրերը Lerna Travel-ի հետ։">
+<title>Lerna Travel | Բացահայտիր Հայաստանը</title>
+<meta name="description" content="Lerna Travel - Բացահայտիր Հայաստանի գեղեցկությունը մեր տուրերի միջոցով։">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f8f8f2;color:#263b32}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:#fff}
-.logo{font-size:25px;font-weight:bold;color:#285b43}
-nav a{margin-left:18px;text-decoration:none;color:#263b32}
-.hero{min-height:540px;padding:100px 8%;color:white;background:linear-gradient(#102d2480,#102d2480),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600') center/cover;display:flex;align-items:center}
-.hero h1{font-size:52px;max-width:650px;margin-bottom:20px}
-.hero p{font-size:19px;margin-bottom:30px}
-.btn{display:inline-block;padding:15px 25px;background:#d8ad63;color:#172d23;text-decoration:none;border-radius:30px;font-weight:bold}
-section{padding:65px 8%}
-h2{text-align:center;font-size:32px;margin-bottom:35px}
-.intro{text-align:center;line-height:1.8;max-width:700px;margin:auto}
-.tours{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.tour{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #0001}
-.tour img{width:100%;height:190px;object-fit:cover}
-.tour div{padding:20px}
-.tour h3{margin-bottom:12px}
-.tour p{line-height:1.6;color:#666}
-.contact{text-align:center;background:#244d3a;color:white}
-.contact p{margin:15px}
-footer{text-align:center;padding:25px;background:#172f25;color:white}
-@media(max-width:600px){
-header{flex-direction:column;gap:15px}
-nav a{margin:0 6px;font-size:13px}
-.hero{min-height:430px;padding:60px 7%}
-.hero h1{font-size:36px}
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f8f5;color:#26352c}
+header{background:#153d30;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:25px;font-weight:bold;letter-spacing:2px}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{min-height:420px;background:linear-gradient(90deg,#102d25dd,#102d2544),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600') center/cover;display:flex;align-items:center;padding:55px 8%;color:white}
+.hero h1{font-size:45px;max-width:650px;margin:0 0 15px}
+.hero p{font-size:18px}
+button,.btn{background:#d49b49;color:white;border:0;padding:13px 22px;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block;font-weight:bold}
+section{padding:48px 7%}
+h2{text-align:center;font-size:30px;color:#194735}
+.intro{text-align:center;color:#65736a}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:30px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #0001}
+.card img{width:100%;height:190px;object-fit:cover}
+.card-content{padding:18px}
+.card h3{margin-top:0;color:#194735}
+.card p{color:#68766d;line-height:1.6}
+.details{display:none}
+.details.active{display:block}
+.back{margin-bottom:25px;background:#315b47}
+.detail-image{width:100%;max-height:390px;object-fit:cover;border-radius:12px}
+.detail-text{line-height:1.8;max-width:850px;margin:auto}
+.booking{max-width:650px;margin:30px auto;background:white;padding:25px;border-radius:12px;box-shadow:0 4px 20px #0001}
+.booking input,.booking select,.booking textarea{width:100%;padding:13px;margin:8px 0 16px;border:1px solid #ccd5ce;border-radius:6px;font-size:15px}
+.booking label{font-weight:bold}
+.booking button{width:100%}
+footer{background:#153d30;color:white;text-align:center;padding:35px 15px;line-height:2}
+footer a{color:#f2c47e}
+.hidden{display:none}
+@media(max-width:600px){.hero h1{font-size:33px}nav a{margin:0 5px;font-size:12px}section{padding:35px 5%}}
 </style>
 </head>
 <body>
+
 <header>
-<div class="logo">🌿 LERNA TRAVEL</div>
+<div class="logo">LERNA TRAVEL</div>
 <nav>
 <a href="#home">Գլխավոր</a>
 <a href="#tours">Տուրեր</a>
@@ -47,47 +52,175 @@ nav a{margin:0 6px;font-size:13px}
 </nav>
 </header>
 
+<main id="homePage">
 <div class="hero" id="home">
 <div>
 <h1>Բացահայտիր Հայաստանը մեզ հետ</h1>
-<p>Ճանապարհորդություններ, անմոռանալի պահեր և նոր բացահայտումներ։</p>
+<p>Ճամփորդություններ, անմոռանալի պահեր և հայկական հյուրընկալություն</p>
 <a class="btn" href="#tours">Դիտել տուրերը</a>
 </div>
 </div>
 
-<section id="about">
-<h2>Բարի գալուստ Lerna Travel</h2>
-<p class="intro">Մենք ստեղծում ենք հետաքրքիր ճանապարհորդություններ Հայաստանի ամենագեղեցիկ վայրերով։ Միացիր մեզ և բացահայտիր Հայաստանի բնությունը, պատմությունն ու մշակույթը։</p>
-</section>
-
 <section id="tours">
 <h2>Մեր տուրերը</h2>
-<div class="tours">
-<div class="tour">
-<img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?w=800" alt="Տաթև">
-<div><h3>Դեպի Տաթև</h3><p>Բացահայտիր Սյունիքի հրաշալի բնությունն ու Տաթևի վանքը։</p></div>
-</div>
-<div class="tour">
-<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800" alt="Գյումրի">
-<div><h3>Գյումրի</h3><p>Հին քաղաքի յուրահատուկ ճարտարապետություն և ջերմ մթնոլորտ։</p></div>
-</div>
-<div class="tour">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Սևան">
-<div><h3>Սևան</h3><p>Կապույտ լիճ, գեղեցիկ տեսարաններ և հանգիստ բնության գրկում։</p></div>
-</div>
-<div class="tour">
+<p class="intro">Ընտրիր քո հաջորդ անմոռանալի ճանապարհորդությունը</p>
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600359756098-8bc52195bbf4?w=800" alt="Գյումրի">
+<div class="card-content">
+<h3>Գյումրիի տուր</h3>
+<p>Հին քաղաքի փողոցներ, հայկական ճարտարապետություն և Գյումրու յուրահատուկ ոգի։</p>
+<a class="btn" href="#gyumri">Մանրամասներ</a>
+</div></div>
+
+<div class="card">
 <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="Լոռի">
-<div><h3>Լոռի</h3><p>Անտառներ, լեռներ, ձորեր և պատմական վանքեր։</p></div>
-</div>
+<div class="card-content">
+<h3>Լոռու տուր</h3>
+<p>Կանաչ բնություն, վանքեր, ձորեր և անմոռանալի տեսարաններ։</p>
+<a class="btn" href="#lori">Մանրամասներ</a>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=800" alt="Ծաղկաձոր">
+<div class="card-content">
+<h3>Ծաղկաձորի տուր</h3>
+<p>Լեռներ, մաքուր օդ, հանգիստ և գեղեցիկ ձմեռային բնություն։</p>
+<a class="btn" href="#tsaghkadzor">Մանրամասներ</a>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Սյունիք">
+<div class="card-content">
+<h3>Սյունիքի տուր</h3>
+<p>Տաթև, Խնձորեսկ, Շաքիի ջրվեժ և հարավային Հայաստանի հրաշքները։</p>
+<a class="btn" href="#syunik">Մանրամասներ</a>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Վայոց ձոր">
+<div class="card-content">
+<h3>Վայոց ձորի տուր</h3>
+<p>Նորավանք, Արենի, քարանձավներ և գինեգործական ավանդույթներ։</p>
+<a class="btn" href="#vayots">Մանրամասներ</a>
+</div></div>
+
 </div>
 </section>
 
-<section class="contact" id="contact">
-<h2>Ճանապարհորդությունը սկսվում է այստեղ</h2>
-<p>Գրիր մեզ՝ տուրերի և ամրագրումների համար։</p>
-<a class="btn" href="https://wa.me/" target="_blank">Կապվել WhatsApp-ով</a>
+<section id="about">
+<h2>Մեր մասին</h2>
+<p class="intro">LERNA TRAVEL-ը հրավիրում է բացահայտելու Հայաստանի ամենագեղեցիկ անկյունները։ Մեր նպատակն է յուրաքանչյուր ճանապարհորդությունը դարձնել անմոռանալի փորձառություն։</p>
 </section>
+</main>
 
-<footer>© 2026 Lerna Travel | Բացահայտիր Հայաստանը</footer>
+<div id="detailPage" class="details">
+<section>
+<button class="back" onclick="goHome()">← Վերադառնալ տուրերին</button>
+<div id="detailContent"></div>
+</section>
+</div>
+
+<footer id="contact">
+<h2 style="color:white">LERNA TRAVEL</h2>
+Բացահայտիր Հայաստանը մեզ հետ<br>
+Հեռախոս՝ <a href="tel:+37433436383">+374 33 43 63 83</a><br>
+WhatsApp՝ <a href="https://wa.me/37433436383">Գրել մեզ</a><br>
+Email՝ lernatravel98@gmail.com
+<p>© 2026 Lerna Travel. Բոլոր իրավունքները պաշտպանված են։</p>
+</footer>
+
+<script>
+const tours={
+gyumri:{
+name:"Գյումրիի տուր",
+image:"https://images.unsplash.com/photo-1600359756098-8bc52195bbf4?w=1200",
+desc:"Բացահայտիր Հայաստանի մշակութային մայրաքաղաք Գյումրին։",
+places:["Վարդանանց հրապարակ","Սև բերդ","Կումայրի պատմական թաղամաս","Ասլամազյան քույրերի պատկերասրահ"],
+program:"Ճանապարհորդություն դեպի Գյումրի, զբոսանք քաղաքի պատմական փողոցներով, տեսարժան վայրերի այցելություն և ազատ ժամանակ՝ լուսանկարների ու հանգստի համար։"
+},
+lori:{
+name:"Լոռու տուր",
+image:"https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200",
+desc:"Բացահայտիր Լոռվա բնության և պատմության հրաշքները։",
+places:["Հաղպատի վանք","Սանահինի վանք","Օձունի եկեղեցի","Դսեղ"],
+program:"Մեկօրյա ճանապարհորդություն Լոռվա գեղատեսիլ վայրերով՝ պատմական հուշարձաններով, բնության տեսարաններով և հայկական հյուրասիրությամբ։"
+},
+tsaghkadzor:{
+name:"Ծաղկաձորի տուր",
+image:"https://images.unsplash.com/photo-1511497584788-876760111969?w=1200",
+desc:"Լեռներ, հանգիստ և անմոռանալի ձմեռային օրեր։",
+places:["Կեչառիսի վանք","Ճոպանուղի","Ծաղկաձորի կենտրոն","Հանգստի գոտիներ"],
+program:"Ճանապարհորդություն դեպի Ծաղկաձոր, տեսարժան վայրերի այցելություն, հանգիստ և ազատ ժամանակ։"
+},
+syunik:{
+name:"Սյունիքի տուր",
+image:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200",
+desc:"Դեպի Հայաստանի հարավի անտակ գանձերը։",
+places:["Տաթևի վանք","Տաթևի ճոպանուղի","Խնձորեսկ","Շաքիի ջրվեժ"],
+program:"Բացահայտիր Սյունիքի պատմական և բնական հուշարձանները՝ անմոռանալի տեսարաններով և հետաքրքիր կանգառներով։"
+},
+vayots:{
+name:"Վայոց ձորի տուր",
+image:"https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200",
+desc:"Խաղաղության գինին ու քարանձավի գաղտնիքները։",
+places:["Նորավանք","Արենի","Արենիի քարանձավ","Գինու համտես"],
+program:"Ճանապարհորդություն դեպի Վայոց ձոր՝ պատմական վանքեր, քարանձավ, գինեգործական ավանդույթներ և համտեսի հնարավորություն։"
+}
+};
+
+function showTour(id){
+const t=tours[id];
+if(!t)return;
+document.getElementById("homePage").classList.add("hidden");
+document.getElementById("detailPage").classList.add("active");
+document.getElementById("detailContent").innerHTML=`
+<img class="detail-image" src="${t.image}" alt="${t.name}">
+<div class="detail-text">
+<h2>${t.name}</h2>
+<p>${t.desc}</p>
+<h3>Այցելության վայրեր</h3>
+<ul>${t.places.map(x=>`<li>${x}</li>`).join("")}</ul>
+<h3>Տուրի ծրագիրը</h3>
+<p>${t.program}</p>
+</div>
+<div class="booking">
+<h2>Ամրագրել տուրը</h2>
+<form action="https://formsubmit.co/lernatravel98@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Նոր ամրագրում - Lerna Travel">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="Ընտրված տուր" value="${t.name}">
+<label>Անուն, ազգանուն</label>
+<input name="Անուն և ազգանուն" required placeholder="Ձեր անունը">
+<label>Հեռախոսահամար</label>
+<input name="Հեռախոս" type="tel" required placeholder="+374...">
+<label>Մասնակիցների քանակ</label>
+<input name="Մասնակիցների քանակ" type="number" min="1" max="50" value="1" required>
+<label>Ցանկալի ամսաթիվ</label>
+<input name="Ամսաթիվ" type="date" required>
+<label>Լրացուցիչ հաղորդագրություն</label>
+<textarea name="Հաղորդագրություն" rows="4" placeholder="Ձեր ցանկությունները"></textarea>
+<label style="font-weight:normal"><input type="checkbox" required style="width:auto"> Համաձայն եմ, որ իմ տվյալներն օգտագործվեն ամրագրման հայտը մշակելու համար։</label>
+<button type="submit">Ուղարկել ամրագրումը</button>
+</form>
+</div>`;
+window.scrollTo(0,0);
+}
+function goHome(){
+location.hash="tours";
+}
+function route(){
+const id=location.hash.replace("#","");
+if(tours[id])showTour(id);
+else{
+document.getElementById("homePage").classList.remove("hidden");
+document.getElementById("detailPage").classList.remove("active");
+}
+}
+window.addEventListener("hashchange",route);
+route();
+</script>
 </body>
 </html>
