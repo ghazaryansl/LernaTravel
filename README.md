@@ -1,2 +1,0 @@
-# LernaTravel
-Lerna Travel
